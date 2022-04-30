@@ -1,0 +1,33 @@
+#import <Foundation/Foundation.h>
+let a = Double.random(in: -20.0 ..< 20.0)
+if a == 0.0 {
+fatalError("a rolled 0")
+}
+let b = Double.random(in: -20.0 ..< 20.0)
+let c = Double.random(in: -20.0 ..< 20.0)
+
+if c == 0 {
+let x1 = 0;
+let x2 = -b / a
+print("x1 = \(x1) ; x2 = \(x2)")
+} else if b == 0{
+if c > 0 {
+print ("No solutions")
+} else {
+let temp = -c/a
+let x = temp.squareRoot()
+print("x = +- \(x)")
+}
+} else {
+let D = b * b - 4 * a * c;
+if D > 0 {
+let x1 = (-b - D.squareRoot()) / (2 * a)
+let x2 = (-b + D.squareRoot()) / (2 * a)
+print("x1 = \(x1) ; x2 = \(x2)")
+} else if D < 0 {
+print("D < 0, x1, x2 are complex")
+} else {
+let x = (-b / 2 * a) / (2 * a)
+print("x1 = x2 = \(x)")
+}
+}
