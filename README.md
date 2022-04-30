@@ -1,5 +1,7 @@
 # Overview 
 # Task 2 
+> Note that Yii 1.1 [has reached end of life](http://www.yiiframework.com/news/90/update-on-yii-1-1-support-and-end-of-life/)
+  and won't receive updates except security fixes. Please start new projects using [Yii 2](https://github.com/yiisoft/yii2).
 Напишите программу расчета и вывода первых десяти факториалов.
 # Task 3
 Даны вещественные числа а, в, с, а≠0. Решить уравнение аx 2 +bx+c =0. Учесть возможность равенства корней.
