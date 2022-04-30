@@ -1,0 +1,14 @@
+#import <Foundation/Foundation.h>
+
+int main(int argc, const char * argv[]) {
+@autoreleasepool {
+for (int i = 1; i <= 10; i++) {
+int factorial = 1, multiplier = i;
+while (multiplier){
+factorial *= multiplier--;
+}
+printf("%d! = %d\n", i, factorial);
+}
+}
+return 0;
+}
