@@ -1,0 +1,55 @@
+import Foundation
+
+//5. Словарь с данными о школьниках и среднем балле Pupil(name, avg_mark), классе и количестве учеников Class(name, pupils_number).
+
+var pupil = [String: Double]()
+
+var group:[String:Int] = [
+"1A":19,
+"1B":21,
+"1C":18
+]
+
+print("Pupils dictionary contains \(pupil.count) students")
+print("Groups dictionary contains \(group.count) groups")
+print()
+
+print("There are only \(group["1A"]!) pupils in 1A")
+print()
+
+for (key, value) in group {
+print("\(key) : \(value) students")
+}
+print()
+
+pupil["Romanenko Lolita"] = 10.0
+print("Pupils dictionary contains \(pupil.count) student")
+print()
+
+group["1C"] = 20
+print("1C now got \(group["1C"]!) srudents")
+print()
+
+print("Groups sorted by name: ")
+let groupsSortedByName = group.sorted( by: { $0.0 < $1.0 })
+for (key, value) in groupsSortedByName {
+print("\(key) group got \(value) students")
+}
+print()
+
+print("Groups sorted by amount of students: ")
+let groupsSortedByStudents = group.sorted( by: { $0.1 > $1.1 })
+for (key, value) in groupsSortedByStudents {
+print("\(key) group got \(value) students")
+}
+print()
+
+print("Now Groups dictionary contains \(group.count) groups")
+group.removeValue(forKey: "1A")
+print("1A was deleted from Groups dict.")
+print("Now Groups dictionary contains \(group.count) groups")
+print()
+
+group.removeAll()
+print("All elements were deleted from Groups dict.")
+print("Now Groups dictionary contains \(group.count) groups")
